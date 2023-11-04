@@ -7,6 +7,37 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
+    console.log("AppComponent: Constructor");
+  }
+
+  ngOnInit() {
+    console.log("AppComponent: OnInit");
+  }
+
+  ngDoCheck() {
+    console.log("AppComponent: DoCheck");
+  }
+
+  ngAfterContentInit() {
+    console.log("AppComponent: AfterContentInit");
+  }
+
+  ngAfterContentChecked() {
+    console.log("AppComponent: AfterContentChecked");
+  }
+
+  ngAfterViewInit() {
+    console.log("AppComponent: AfterViewInit");
+  }
+
+
+  ngAfterViewChecked() {
+    console.log("AppComponent: AfterViewInit");
+  }
+
+  ngOnDestroy() {
+    console.log("AppComponent: OnDestroy"); 
+  }
 
 }

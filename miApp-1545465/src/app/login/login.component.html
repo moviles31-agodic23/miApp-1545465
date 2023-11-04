@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" #formDirective="ngForm">
+  <ion-row>
+    <ion-col>
+      <label for="username">Username</label>
+      <input type="text" name="username"
+        placeholder="Username"
+        formControlName="username"
+        [ngClass]="{'is-invalid': loginForm?.get('username')?.invalid}">
+        <span *ngIf="loginForm?.get('username')?.invalid">
+          Please enter your Username!
+        </span>
+    </ion-col>
+  </ion-row>
+ 
+  <ion-row>
+    <ion-col>
+      <label for="password">Password</label>
+      <input type="password" name="password"
+        placeholder="Password"
+        formControlName="password"
+        [ngClass]="{'is-invalid': loginForm?.get('password')?.invalid}">
+        <span *ngIf="loginForm?.get('password')?.invalid">
+          Please enter your Password!
+        </span>
+    </ion-col>
+  </ion-row>
+
+  <button type="submit" class="btn" [disabled]="!loginForm.valid">Login</button>
+</form>
